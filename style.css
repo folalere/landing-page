@@ -1,0 +1,195 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+} 
+
+
+body {
+  /* margin: 0;
+  font-family: Roboto;
+  display: flex;
+  flex-direction: column; */
+}
+
+
+div {
+
+  font-size: 24;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 100;
+  font-family: cursive;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.header-container, footer {
+background: magenta;
+color: whitesmoke;
+}
+
+.header-container {
+  width: 100%;
+  background: magenta;
+  color: whitesmoke;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 900px; */
+  margin: auto;
+  background: magenta;
+  color: white;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 900px;
+  padding: 0 10px;
+}
+
+.header button {
+  margin-top: 15px;
+  padding: 12px 24px;
+  background: white;
+  color: magenta;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 18;
+  box-shadow: 3px 3px 5px rgba(253, 141, 206, 0.3);
+  transition: all .3s ease-in-out;
+
+}
+
+.header button:hover {
+  background: rgb(189, 180, 189);
+  color: rgb(237, 232, 240);
+}
+
+.features-container {
+  display: flex;
+  align-items: stretch;
+  padding: 50px 5vw;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  transition: all .3s ease-in-out;
+  
+}
+
+.features { 
+  background: #fae1f6;
+  padding: 20px;
+  width: 100%;
+  /* flex: 1 1 300px; */
+  max-width: 250px; 
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /*the most important part*/
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.features img {
+  max-height: 300px; /*limit if needed*/
+  margin-bottom: 10px;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.features:hover img {
+  transform: scale(1.05);
+}
+
+
+footer {
+ /* background: */
+text-align: center;
+height: 100px;
+
+}
+
+footer p {
+  background: magenta;
+  /* display: inline-block; */
+  padding: 4px, 8px;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+}
+
+
+/* -------------------- */
+/* 🎯 RESPONSIVE STYLES */
+/* -------------------- */
+
+/* Tablets */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .header button {
+    margin-top: 10px;
+  }
+
+  .features-container {
+    padding: 30px 4vw;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .features {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .features img {
+    max-height: 200px;
+  }
+
+  .header button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
